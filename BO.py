@@ -21,10 +21,10 @@ class importStanMagazynu(object):
 	pd.set_option('display.max_columns',10)
 
 	userhome = os.path.expanduser('~')
-	excelfile = os.path.join(userhome, 'Desktop/GastroMag/StanMag', 'BO_GASTRO.xls')
+	excelfile = os.path.join(userhome, 'Desktop/magTermyv3', 'BO_GASTRO.xls')
 
 # df = pd.read_excel(excelfile, skiprows=4, usecols=['Lp.','Nazwa','Grupa','Cena','Unnamed: 5','Ilość'])
-	df = pd.read_excel(excelfile, usecols=['ID','Nazwa','Stan rzeczywisty','JM'])
+	df = pd.read_excel(excelfile, usecols=['ID','Nazwa','Stan rzeczywisty','JM','WartoscNetto','CenaZakupu'])
 	open(excelfile, "r")
 
 # df.rename( columns={'Unnamed: 5': 'Jedn.'}, inplace=True)

@@ -43,6 +43,7 @@ BO = Table('BO', metadata,
         Column('Nazwa', String),
         Column('Ilosc', Float),
         Column('Jedn.', String)
+        
 )
 
 RWBar = Table('RWBar', metadata,
