@@ -29,6 +29,7 @@ def dataFrameFromSQL(path):
     a = df[df['Lp.'].astype(str).str.isdigit()]
     a['Ilosc'] = a['Ilosc'].str.replace(' ', '')
     a['Ilosc'] = a['Ilosc'].str.replace(',', '.').astype(float)
+    a['Cena'] = a['Cena'].str.replace(',','.').astype(float)
     a['Jedn.'] = a['Jedn.'].str.replace('Szt.', 'Szt')
     a['Nazwa'] = a['Nazwa'].str.replace('( [(][0-9]*[/]*[0-9]*[)])', '')
     return a

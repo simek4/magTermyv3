@@ -51,7 +51,7 @@ excelfile29 = os.path.join(userhome, 'Desktop/RA', '2109-2409.xls')
 excelfile30 = os.path.join(userhome, 'Desktop/RA', '2509-2809.xls')
 excelfile31 = os.path.join(userhome, 'Desktop/RA', '2909-0410.xls')
 excelfile32 = os.path.join(userhome, 'Desktop/RA', '0510-3110.xls')
-excelfile33 = os.path.join(userhome, 'Desktop/RA', '0111-3101.xls')
+excelfile33 = os.path.join(userhome, 'Desktop/RA', '0111-3112.xls')
 
 # excelfile = os.path.join(userhome, 'Desktop/Cytryny', 'BEEFEATERSPRITZ.xls')
 # excelfile2 = os.path.join(userhome, 'Desktop/Cytryny', 'BLUELAGOON.xls')
@@ -129,6 +129,9 @@ def dataFrameFromSQL(path):
     df['Ilosc'] = df['Ilosc'].str.replace(' ', '')
 
     df['Ilosc'] = df['Ilosc'].str.replace(',', '.').astype(float)
+    df['Netto'] = df['Netto'].str.replace(' ', '')
+
+    df['Netto'] = df['Netto'].str.replace(',', '.').astype(float)
 
     # a['Jedn.'] = a['Jedn.'].str.replace('Szt.', 'Szt')
     # a['Nazwa'] = a['Nazwa'].str.replace('( [(][0-9]*[/]*[0-9]*[)])', '')

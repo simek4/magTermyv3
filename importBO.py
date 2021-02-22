@@ -54,6 +54,7 @@ class importStanMagazynu(object):
 
 	a.to_sql('BO', engine, index=False)
 	engine.execute('ALTER TABLE BO ADD PRIMARY KEY (`ID`);')
-
+	a.to_sql('StanMagazynu', engine, index=False)
+	engine.execute('ALTER TABLE StanMagazynu ADD PRIMARY KEY (`ID`);')
 
 

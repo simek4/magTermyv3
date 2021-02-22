@@ -64,7 +64,6 @@ class importKomplet(object):
 # 	a['Jedn.'] = a['Jedn.'].str.replace('opak.', 'Szt')  #w tt soft jest to jako sztuka
 
 	df.to_sql('komplety', engine, index=False)
-	# engine.execute('ALTER TABLE BO ADD PRIMARY KEY (`idkompletu`);')
 
 
 
